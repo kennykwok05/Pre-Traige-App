@@ -1,24 +1,3 @@
-/*
-* Kenny Kwok
-* kkwok21@nyseneca.ca
-* 130049232
-* 05/03/2024
-Citation and Sources...
-Final Project Milestone 1
-Module: Time.h
-Filename: Time.h
-Version 1.0
-Author   John Doe
-Revision History
------------------------------------------------------------
-Date      Reason
-2023/?/?  Preliminary release
-2023/?/?  Debugged DMA
------------------------------------------------------------
-I have done all the coding by myself and only copied the code
-that my professor provided to complete my workshops and assignments.
------------------------------------------------------------*/
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
@@ -29,24 +8,24 @@ that my professor provided to complete my workshops and assignments.
 
 
 using namespace std;
-
+// Implements a menu system for a pre-triage healthcare application
 namespace seneca {
     // initialize a Menu object
     Menu::Menu(const char* menuContent, int numberOfTabs) {
         // set to empty state
         m_text = nullptr;
         m_numOptions = 0;
-        // if not provided, no tabs will be applied by default.
+        // Ensure the number of tabs is non-negative
         if (numberOfTabs < 0) {
             m_numTabs = 0;
         }
         else {
             m_numTabs = numberOfTabs;
         }
-        // dynamically allocates memory to store the content
+        // allocate memory for the menu content
         m_text = new char[strlen(menuContent) + 1]; // Allocate memory
         strcpy(m_text, menuContent); 
-        // scans m_text to count the number of newline characters (\n)
+        // count the number of menu options based on newline characters
         for (const char* option = m_text; *option != '\0'; option++) {
             if (*option == '\n') {
                 m_numOptions++;
@@ -59,14 +38,14 @@ namespace seneca {
         delete[] m_text;
     }
 
-    // presenting the Menu content to the user
+    // displays the menu with proper indentation
     void Menu::display() const {
         int i = 0;
         // make a copy of m_text for tokenization
         char* copy = new char[strlen(m_text) + 1];
         strcpy(copy, m_text);
+        // Tokenize menu content and print each line
         char* token = strtok(copy, "\n"); 
-        // give indentation for all the contents
         while (token != nullptr) {
             for (i = 0; i < m_numTabs; i++) {
                 cout << "   ";
@@ -74,7 +53,7 @@ namespace seneca {
             cout << token << endl;
             token = strtok(nullptr, "\n");
         }
-        // give indentation for the exit line
+        // print exit option with proper indentation
         for (i = 0; i < m_numTabs; i++) {
             cout << "   ";
         }
@@ -87,7 +66,7 @@ namespace seneca {
         delete[] copy;
     }
 
-    // insertion operator first calls the display function and then receives the user's selection as an integer value
+    // insertion operator Displays the menu and gets a valid user selection
     int& Menu::operator>>(int& Selection) {
         size_t i = 0;    
         string input;
@@ -117,7 +96,7 @@ namespace seneca {
             if (validInt) {
                 // Convert string to integer if input is valid
                 Selection = stoi(input);
-
+                // ensure selection is within the valid range
                 if (Selection >= 0 && Selection <= m_numOptions) {
                     validInput = true;
                 }

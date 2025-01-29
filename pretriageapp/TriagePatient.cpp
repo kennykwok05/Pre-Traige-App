@@ -1,29 +1,9 @@
-/*
-* Kenny Kwok
-* kkwok21@nyseneca.ca
-* 130049232
-* 01/04/2024
-Citation and Sources...
-Final Project Milestone 4
-Module: TriagePatient.cpp
-Filename: TriagePatient.cpp
-Version 1.0
-Author   John Doe
-Revision History
------------------------------------------------------------
-Date      Reason
-2023/?/?  Preliminary release
-2023/?/?  Debugged DMA
------------------------------------------------------------
-I have done all the coding by myself and only copied the code
-that my professor provided to complete my workshops and assignments.
------------------------------------------------------------*/
-
 #define _CRT_SECURE_NO_WARNINGS
 #include "TriagePatient.h"
 #include <cstring>
 
 using namespace std;
+// Handles triage patient details, including symptoms, ticket management, and customized input/output formatting.
 namespace seneca {
 
     int TriagePatient::nextTriageTicket = 1; // initialized to one

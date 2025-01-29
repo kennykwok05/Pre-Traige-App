@@ -1,24 +1,3 @@
-/*
-* Kenny Kwok
-* kkwok21@nyseneca.ca
-* 130049232
-* 05/03/2024
-Citation and Sources...
-Final Project Milestone 1
-Module: Time.h
-Filename: Time.h
-Version 1.0
-Author   John Doe
-Revision History
------------------------------------------------------------
-Date      Reason
-2023/?/?  Preliminary release
-2023/?/?  Debugged DMA
------------------------------------------------------------
-I have done all the coding by myself and only copied the code
-that my professor provided to complete my workshops and assignments.
------------------------------------------------------------*/
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include "Utils.h"
@@ -26,7 +5,7 @@ that my professor provided to complete my workshops and assignments.
 #include "iomanip"
 
 using namespace std;
-
+// Manages and manipulates time in minutes, with support for input/output, arithmetic operations, and time formatting
 namespace seneca {
     // resets the Time object to the current time 
     Time& Time::reset() {

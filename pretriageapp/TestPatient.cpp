@@ -1,27 +1,8 @@
-/*
-* Kenny Kwok
-* kkwok21@nyseneca.ca
-* 130049232
-* 01/04/2024
-Citation and Sources...
-Final Project Milestone 4
-Module: TestPatient.cpp
-Filename: TestPatient.cpp
-Version 1.0
-Author   John Doe
-Revision History
------------------------------------------------------------
-Date      Reason
-2023/?/?  Preliminary release
-2023/?/?  Debugged DMA
------------------------------------------------------------
-I have done all the coding by myself and only copied the code
-that my professor provided to complete my workshops and assignments.
------------------------------------------------------------*/
-
 #include "TestPatient.h"
 
 using namespace std;
+
+// manages TestPatient details, including assigning test tickets and customizing input/output
 namespace seneca {
 
     int TestPatient::nextTestTicket = 1; // initialized to one

@@ -1,14 +1,3 @@
-/***********************************************************************
-// OOP244 Project
-//
-// File  Utils.h
-// Author  Fardad Soleimanloo
-// Description
-//
-// Revision History
-// -----------------------------------------------------------
-// Name                 Date            Reason
-***********************************************************************/
 #ifndef SENECA_UTILS_H_
 #define SENECA_UTILS_H_
 #include <iostream>

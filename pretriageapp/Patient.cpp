@@ -1,24 +1,3 @@
-/*
-* Kenny Kwok
-* kkwok21@nyseneca.ca
-* 130049232
-* 30/03/2024
-Citation and Sources...
-Final Project Milestone 3
-Module: Patient.cpp
-Filename: Patient.cpp
-Version 1.0
-Author   John Doe
-Revision History
------------------------------------------------------------
-Date      Reason
-2023/?/?  Preliminary release
-2023/?/?  Debugged DMA
------------------------------------------------------------
-I have done all the coding by myself and only copied the code
-that my professor provided to complete my workshops and assignments.
------------------------------------------------------------*/
-
 #define _CRT_SECURE_NO_WARNINGS
 #include "Patient.h"
 #include <cstring>
@@ -26,6 +5,7 @@ that my professor provided to complete my workshops and assignments.
 
 using namespace std;
 
+// manage patient records in a healthcare pre-triage system by storing, validating, and processing patient information efficiently
 namespace seneca {
 
     // constructor

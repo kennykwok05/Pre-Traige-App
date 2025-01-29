@@ -1,26 +1,8 @@
-/*
-* Kenny Kwok
-* kkwok21@nyseneca.ca
-* 130049232
-* 30/03/2024
-Citation and Sources...
-Final Project Milestone 3
-Module: Ticket.cpp
-Filename: Ticket.cpp
-Version 1.0
-Author   John Doe
-Revision History
------------------------------------------------------------
-Date      Reason
-2023/?/?  Preliminary release
-2023/?/?  Debugged DMA
------------------------------------------------------------
-I have done all the coding by myself and only copied the code
-that my professor provided to complete my workshops and assignments.
------------------------------------------------------------*/
 #include <iostream>
 #include "Ticket.h"
 using namespace std;
+
+//  manage and display ticket information with unique numbers and timestamps
 namespace seneca {
     // Constructs a Ticket by setting the m_number member variable
     Ticket::Ticket(int number) {
